@@ -1,0 +1,54 @@
+body {
+    font-family: $font-family;
+    font-size: $body-font-size;
+    border-color: $grayish-blue;
+}
+
+h1 {
+    font-family: $font-family;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    min-height: 20%;
+
+    & span {
+        font-family: $font-family;
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+
+    & + p {
+        
+        font-size: 1rem;
+        font-weight: 200;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.container {
+    margin:0 auto;
+    padding: 0 1.8rem;
+}
+
+.centered-txt {
+    text-align: center;
+}
+
+.card {
+    border: 1px solid $red;
+    min-height: 20%;
+    background-color: $light-gray;
+    margin: 1.6rem auto;
+
+    & h2 {
+        font-size: 1.2rem;
+        padding: 1em 1em 0 1em;
+    }
+
+    & p {
+        font-size: $body-font-size;
+        font-weight: 200;
+        padding: 1em;
+    }
+
+}
