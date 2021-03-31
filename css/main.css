@@ -78,6 +78,7 @@ select {
 
 .brtp-red {
   border-top: 4px solid #ea5353;
+  margin-top: 5rem;
 }
 
 .brtp-orange {
@@ -93,7 +94,13 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 0.9375rem;
   border-color: #a3a5ae;
+  background-color: #fafafa;
   margin: auto;
+}
+@media (min-width: 50rem) {
+  body {
+    padding-top: 5.3125rem;
+  }
 }
 
 h1 {
@@ -102,16 +109,32 @@ h1 {
   margin: 1rem auto;
   min-height: 20%;
 }
+@media (min-width: 50rem) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
 h1 span {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 200;
 }
-h1 + p {
+@media (min-width: 50rem) {
+  h1 span {
+    font-size: 2.5rem;
+  }
+}
+
+header p {
+  border: 1px solid red;
   font-size: 1rem;
   font-weight: 200;
   text-align: center;
   margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(1440px/2);
+  padding: 0 0.5rem;
 }
 
 .container {
@@ -124,6 +147,7 @@ h1 + p {
     border: 1px solid red;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
   }
 }
 
@@ -141,12 +165,12 @@ h1 + p {
 }
 .card h2 {
   font-size: 1.2rem;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem 1.5rem 0 1rem;
 }
 .card p {
   font-size: 0.8rem;
   font-weight: 200;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem 1.5rem 0 1rem;
 }
 .card img {
   display: inline;
@@ -158,6 +182,11 @@ h1 + p {
   margin-left: auto;
   margin-right: 1em;
   padding-bottom: 1em;
+}
+@media (min-width: 50em) {
+  .card {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
