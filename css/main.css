@@ -115,9 +115,14 @@ h1 {
   }
 }
 h1 span {
+  display: block;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 200;
+  line-height: 1.1;
+}
+h1 span:last-child {
+  font-weight: bold;
 }
 @media (min-width: 50rem) {
   h1 span {
