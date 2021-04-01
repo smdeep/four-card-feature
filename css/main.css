@@ -89,6 +89,10 @@ select {
   border-top: 4px solid #549ef2;
 }
 
+.transy {
+  transform: translateY(3rem);
+}
+
 body {
   max-width: 1440px;
   font-family: "Poppins", sans-serif;
@@ -119,10 +123,10 @@ h1 span {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 200;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 h1 span:last-child {
-  font-weight: bold;
+  font-weight: 600;
 }
 @media (min-width: 50rem) {
   h1 span {
@@ -131,28 +135,46 @@ h1 span:last-child {
 }
 
 header p {
-  border: 1px solid red;
   font-size: 1rem;
   font-weight: 200;
   text-align: center;
   margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: calc(1440px/2);
+  max-width: calc(1440px / 2);
   padding: 0 0.5rem;
 }
 
 .container {
-  border: 1px solid blue;
   margin: 0 auto;
   padding: 0 1.8rem;
 }
 @media (min-width: 50em) {
   .container {
-    border: 1px solid red;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0.1rem;
+    padding: 0 5rem;
+  }
+  .container .card:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1;
+    transform: translateY(7rem);
+  }
+  .container .card:nth-child(2) {
+    grid-column: 2/2;
+    grid-row: 1;
+  }
+  .container .card:nth-child(3) {
+    grid-column: 2/2;
+    grid-row: 2;
+    transform: translateY(1rem);
+  }
+  .container .card:nth-child(4) {
+    grid-column: 3/3;
+    grid-row: 1;
+    transform: translateY(7rem);
   }
 }
 
@@ -162,20 +184,20 @@ header p {
 
 .card {
   min-height: 20%;
-  max-width: 400px;
+  max-width: 350px;
   background-color: #fafafa;
   margin: 1.6rem auto;
   border-radius: 5px;
+  padding: 1.7rem 1.5rem 0 1.7rem;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 .card h2 {
   font-size: 1.2rem;
-  padding: 1rem 1.5rem 0 1rem;
 }
 .card p {
+  max-width: 17.1875rem;
   font-size: 0.8rem;
   font-weight: 200;
-  padding: 1rem 1.5rem 0 1rem;
 }
 .card img {
   display: inline;

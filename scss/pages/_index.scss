@@ -7,12 +7,11 @@ body {
     margin: auto;
     // put this in a media query
 
-    @media (min-width:50rem) {
-    & {
-        padding-top: 5.3125rem;
+    @media (min-width: 50rem) {
+        & {
+            padding-top: 5.3125rem;
+        }
     }
-
-}
 }
 
 h1 {
@@ -21,7 +20,7 @@ h1 {
     margin: 1rem auto;
     min-height: 20%;
 
-    @media (min-width:50rem) {
+    @media (min-width: 50rem) {
         & {
             font-size: 2.5rem;
         }
@@ -32,49 +31,75 @@ h1 {
         font-family: $font-family;
         font-size: 1.5rem;
         font-weight: 200;
-        line-height: 1.1;
+        line-height: 1.2;
 
         &:last-child {
-            font-weight: bold;
+            font-weight: 600;
         }
 
-        @media (min-width:50rem) {
+        @media (min-width: 50rem) {
             & {
                 font-size: 2.5rem;
             }
         }
     }
-
-
 }
 
 header p {
-    border:1px solid red;
+    // border: 1px solid red;
     font-size: 1rem;
     font-weight: 200;
     text-align: center;
     margin-bottom: 2rem;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     // Check this tomorrow
-    max-width: calc(1440px/2);
+    max-width: calc(1440px / 2);
     padding: 0 0.5rem;
 }
 
 .container {
-    border: 1px solid blue;
-    margin:0 auto;
+    // border: 1px solid blue;
+    margin: 0 auto;
     padding: 0 1.8rem;
 
-
-
-    @media  (min-width: 50em) {
+    @media (min-width: 50em) {
         & {
-            border: 1px solid red;
+            // border: 1px solid red;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            // grid-template-rows: 1fr 1fr 1fr;
-            grid-gap: 1rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+            grid-gap: .1rem;
+
+            padding: 0 5rem;
+        }
+
+        .card:nth-child(1) {
+            // Supervisor
+            grid-column: 1/2;
+            grid-row: 1;
+            transform: translateY(7rem);
+        }
+
+        .card:nth-child(2) {
+            //Team Builder
+            grid-column: 2/2;
+            grid-row: 1;
+        }
+
+        .card:nth-child(3) {
+            //Karma
+            grid-column: 2/2;
+            grid-row: 2;
+            transform: translateY(1rem);
+        }
+
+        .card:nth-child(4) {
+            //Calculator
+            grid-column: 3/3;
+            grid-row: 1;
+
+            transform: translateY(7rem);
         }
     }
 }
@@ -86,32 +111,34 @@ header p {
 .card {
     // border: 1px solid $red;
     min-height: 20%;
-    max-width:400px;
+    max-width: 350px;
     background-color: $light-gray;
     margin: 1.6rem auto;
     border-radius: 5px;
-    
+    padding: 1.7rem 1.5rem 0 1.7rem;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 
     & h2 {
-        
         font-size: 1.2rem;
-        padding: 1rem 1.5rem 0 1rem;
+        // padding: 1rem 1.5rem 0 1.5rem;
     }
 
     & p {
         // border:1px solid red;
-        font-size: .8rem;
+        max-width: 17.1875rem;
+        font-size: 0.8rem;
         font-weight: 200;
-        padding: 1rem 1.5rem 0 1rem;
+        // padding: 1rem 1.5rem 0 1.5rem;
     }
 
     & img {
         display: inline;
         // margin-left: auto;
     }
+
     &__image {
-        width: 20%; height: auto;
+        width: 20%;
+        height: auto;
         // text-align: right;
         // padding: 1em;
         margin-top: 2em;
@@ -122,10 +149,9 @@ header p {
 
     // I am removing the margin from the card
     // because it is now a grid
-    @media (min-width:50em){
+    @media (min-width: 50em) {
         & {
-            margin:0;
+            margin: 0;
         }
     }
-
 }
