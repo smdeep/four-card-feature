@@ -94,12 +94,14 @@ select {
 }
 
 body {
+  background: 2px solid red;
   max-width: 1440px;
   font-family: "Poppins", sans-serif;
   font-size: 0.9375rem;
   border-color: #a3a5ae;
   background-color: #fafafa;
-  margin: auto;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 @media (min-width: 50rem) {
   body {
@@ -182,9 +184,13 @@ header p {
   text-align: center;
 }
 
+.cards {
+  padding: 0 0.5rem;
+  margin: 0 auto;
+}
+
 .card {
   min-height: 20%;
-  max-width: 350px;
   background-color: #fafafa;
   margin: 1.6rem auto;
   border-radius: 5px;
