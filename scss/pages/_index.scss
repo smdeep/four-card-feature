@@ -1,6 +1,6 @@
 body {
     background: 2px solid red;
-    max-width: 1440px;
+    max-width: $max-width;
     font-family: $font-family;
     font-size: $body-font-size;
     border-color: $grayish-blue;
