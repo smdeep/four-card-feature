@@ -110,7 +110,7 @@ body {
 
 h1 {
   font-family: "Poppins", sans-serif;
-  font-size: clamp( var(--fluid-type-min, 1rem), calc(1rem + var(--fluid-type-target, 3vw)), var(--fluid-type-max, 1.3rem) );
+  font-size: 1.5rem;
   margin: 1rem auto;
   min-height: 20%;
 }
