@@ -1,5 +1,5 @@
 body {
-    border: 2px solid red;
+    // border: 2px solid red;
     max-width: $max-width;
     font-family: $font-family;
     font-size: $body-font-size;
@@ -19,7 +19,12 @@ body {
 
 h1 {
     font-family: $font-family;
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
+    font-size: clamp(
+    var(--fluid-type-min, 1rem),
+    calc(1rem + var(--fluid-type-target, 3vw)),
+    var(--fluid-type-max, 1.3rem)
+  );
     margin: 1rem auto;
     min-height: 20%;
 
