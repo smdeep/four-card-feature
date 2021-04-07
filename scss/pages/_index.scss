@@ -35,11 +35,13 @@ h1 {
     }
 
     & span {
+        // border:1px solid red;
         display: block;
         font-family: $font-family;
         font-size: 1.5rem;
         font-weight: 200;
         line-height: 1.2;
+        color: $dark-blue;
 
         &:last-child {
             font-weight: 600;
@@ -56,7 +58,8 @@ h1 {
 header p {
     // border: 1px solid red;
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 400;
+    color: $grayish-blue;
     text-align: center;
     margin-bottom: 2rem;
     margin-left: auto;
