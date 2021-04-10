@@ -228,10 +228,17 @@ header p {
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  margin-top: auto;
+  position: relative;
   padding: 1rem;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  /* left:0; */
+}
+
+.attribution a {
+  color: #549ef2;
 }
 
 /*# sourceMappingURL=main.css.map */
